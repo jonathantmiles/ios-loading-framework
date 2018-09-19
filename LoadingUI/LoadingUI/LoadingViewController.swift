@@ -10,28 +10,24 @@ import UIKit
 
 open class LoadingViewController: UIViewController {
 
-    // draw the animation
+    // load the animation
     let loadingView = IndeterminateLoadingView()
-    
-    
+        
     open override func viewDidLoad() {
         let containerView = UIView()
+        // have it in a specific place
         containerView.center = view.center
         containerView.addSubview(loadingView)
+        // draw the animation
         loadingView.startAnimating()
         view.addSubview(containerView)
     }
     
-    
-    func startAnimating() {
-    }
-    
-    func stopAnimating() {
+    open func stopAnimating() {
         loadingView.stopAnimating()
     }
     
     
     
-    // have it in a specific place
 
 }
